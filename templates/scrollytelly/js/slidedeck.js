@@ -35,7 +35,6 @@ class SlideDeck {
    */
   updateDataLayer(data, options) {
     this.dataLayer.clearLayers();
-
     const defaultOptions = {
       pointToLayer: (p, latlng) => L.marker(latlng),
       style: (feature) => feature.properties.style,

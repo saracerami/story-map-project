@@ -1,0 +1,110 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 82,
+        "AGE": 30,
+        "RACE": "Asian",
+        "SEX": "Male",
+        "TYPE": "NOT CLASSIFIED",
+        "DATE_": 1280707200000,
+        "UNIT": "District 14",
+        "ACTION": "ACCEPT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.167048,
+          40.06051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 233,
+        "AGE": 29,
+        "RACE": "Asian",
+        "SEX": "Female",
+        "TYPE": "LACK OF SERVICE",
+        "DATE_": 1279497600000,
+        "UNIT": "District 2",
+        "ACTION": "ACCEPT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.067928,
+          40.04609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 334,
+        "AGE": 24,
+        "RACE": "Asian",
+        "SEX": "Female",
+        "TYPE": "LACK OF SERVICE",
+        "DATE_": 1231200000000,
+        "UNIT": "District 26",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.13446,
+          39.97902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 376,
+        "AGE": 20,
+        "RACE": "Asian",
+        "SEX": "Female",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1265068800000,
+        "UNIT": "District 35",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.124243,
+          40.040414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 408,
+        "AGE": 36,
+        "RACE": "Asian",
+        "SEX": "Male",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1258675200000,
+        "UNIT": "District 4",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.158782,
+          39.920406
+        ]
+      }
+    }
+  ]
+}

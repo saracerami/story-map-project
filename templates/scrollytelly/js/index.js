@@ -15,24 +15,28 @@ const slides = document.querySelectorAll('.slide');
 
 const slideOptions = {
   'second-slide': {
-    style: (feature) => {
-      return {
-        color: 'red',
-        fillColor: 'green',
-        fillOpacity: 0.5,
-      };
+    pointToLayer: (feature, latLng) => {
+      return L.circleMarker(latLng, {
+        radius: 5, 
+        color: 'blue',
+        weight: 1,
+        fillColor: 'grey',
+        fillOpacity: .5
+      });
     },
     onEachFeature: (feature, layer) => {
       layer.bindTooltip(feature.properties.label);
     },
   },
   'third-slide': {
-    style: (feature) => {
-      return {
+    pointToLayer: (feature, latlng) => {
+      return L.circleMarker(latlng, {
+        radius: 5,
         color: 'blue',
-        fillColor: 'yellow',
+        weight: 1,
+        fillColor: 'grey',
         fillOpacity: 0.5,
-      };
+      });
     },
     onEachFeature: (feature, layer) => {
       layer.bindTooltip(feature.properties.label);
@@ -47,3 +51,4 @@ document.addEventListener('scroll', () => deck.calcCurrentSlideIndex());
 
 deck.preloadFeatureCollections();
 deck.syncMapToCurrentSlide();
+

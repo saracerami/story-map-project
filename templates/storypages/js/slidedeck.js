@@ -9,14 +9,15 @@ class SlideDeck {
    * @param {object} slideOptions The options to create each slide's L.geoJSON
    *                              layer, keyed by slide ID.
    */
-  constructor(slides, map, slideOptions = {}) {
-    this.slides = slides;
-    this.map = map;
-    this.slideOptions = slideOptions;
+constructor(slides, map, slideOptions = {}) {
+  this.slides = slides;
+  this.map = map;
+  this.slideOptions = slideOptions;
 
-    this.dataLayer = L.layerGroup().addTo(map);
-    this.currentSlideIndex = 0;
-  }
+  this.dataLayer = L.layerGroup().addTo(map);
+  this.currentSlideIndex = 0;
+  this.layers = {};
+}  
 
   /**
    * ### updateDataLayer
@@ -31,25 +32,40 @@ class SlideDeck {
    * @return {L.GeoJSONLayer} The new GeoJSON layer that has been added to the
    *                          data layer group.
    */
-  updateDataLayer(data, options) {
-    this.dataLayer.clearLayers();
+  syncMapToSlide(slide) {
 
-    const defaultOptions = {
-      pointToLayer: (p, latlng) => L.marker(latlng),
-      style: (feature) => feature.properties.style,
+}
+
+  updateDataLayer(data, options = {}, slideId) {
+    if (this.layers[slideId]) {
+      this.dataLayer.removeLayer(this.layers[slideId]);
+    }
+
+    const defaultPointToLayer = (_, latlng) => L.marker(latlng);
+    const defaultStyle = (feature) => feature.properties && feature.properties.style;
+    const defaultOnEachFeature = (feature, layer) => {
+      if (feature.properties && feature.properties.label) {
+        layer.bindTooltip(feature.properties.label);
+      }
+    };
+
+    const finalOptions = {
+      pointToLayer: options.pointToLayer || defaultPointToLayer,
+      style: options.style || defaultStyle,
       onEachFeature: (feature, layer) => {
-        if (feature.properties && feature.properties.label) {
-          layer.bindTooltip(feature.properties.label);
+        defaultOnEachFeature(feature, layer);
+        if (options.onEachFeature) {
+          options.onEachFeature(feature, layer);
         }
       }
     };
-    const geoJsonLayer = L.geoJSON(data, options || defaultOptions)
-        .addTo(this.dataLayer);
 
+    const geoJsonLayer = L.geoJSON(data, finalOptions).addTo(this.dataLayer);
+
+    this.layers[slideId] = geoJsonLayer;
     return geoJsonLayer;
   }
-
-  /**
+    /**
    * ### getSlideFeatureCollection
    *
    * Load the slide's features from a GeoJSON file.
@@ -65,9 +81,7 @@ class SlideDeck {
 
   /**
    * ### hideAllSlides
-   *
-   * Add the hidden class to all slides' HTML elements.
-   *
+   *   *
    * @param {NodeList} slides The set of all slide elements, in order.
    */
   hideAllSlides() {
@@ -83,14 +97,43 @@ class SlideDeck {
    *
    * @param {HTMLElement} slide The slide's HTML element
    */
-  async showSlide(slide) {
+async showSlide(slide) {
     this.hideAllSlides(this.slides);
     slide.classList.remove('hidden');
 
-    const collection = await this.getSlideFeatureCollection(slide);
-    const options = this.slideOptions[slide.id];
-    const layer = this.updateDataLayer(collection, options);
+    const slideArray = Array.from(this.slides);
+    const targetIndex = slideArray.indexOf(slide);
 
+    for (let i = targetIndex + 1; i < slideArray.length; i++) {
+      const laterSlideId = slideArray[i].id;
+      if (laterSlideId === 'title-slide') continue;
+      if (this.layers[laterSlideId]) {
+        this.dataLayer.removeLayer(this.layers[laterSlideId]);
+        delete this.layers[laterSlideId];
+      }
+    }
+
+   let layer;
+    let currentCollection;
+    for (let i = 0; i <= targetIndex; i++) {
+      const s = slideArray[i];
+      const collection = await this.getSlideFeatureCollection(s);
+      const options = this.slideOptions[s.id];
+      layer = this.updateDataLayer(collection, options, s.id);
+      if (i === targetIndex) {
+        currentCollection = collection;
+      }
+    }
+for (let i = 0; i < targetIndex; i++) {
+      const olderSlideId = slideArray[i].id;
+      if (olderSlideId === 'intro-slide') continue;
+      if (this.layers[olderSlideId]) {
+        this.layers[olderSlideId].setStyle({ opacity: 0.1, fillOpacity: 0.1 });
+      }
+    }
+    if (slide.id !== 'intro-slide' && this.layers[slide.id]) {
+      this.layers[slide.id].setStyle({ opacity: 1, fillOpacity: 0.9 });
+    }
     /**
      * Create a bounds object from a GeoJSON bbox array.
      * @param {Array} bbox The bounding box of the collection
@@ -120,13 +163,11 @@ class SlideDeck {
     };
 
     this.map.addEventListener('moveend', handleFlyEnd);
-    if (collection.bbox) {
-      this.map.flyToBounds(boundsFromBbox(collection.bbox));
+    if (currentCollection.bbox) {
+      this.map.flyToBounds(boundsFromBbox(currentCollection.bbox));
     } else {
-      this.map.flyToBounds(layer.getBounds());
-    }
-  }
-
+      this.map.flyToBounds(layer.getBounds(), { paddingBottomRight: [300, 0] });
+    }  }
   /**
    * Show the slide with ID matched by currentSlideIndex. If currentSlideIndex is
    * null, then show the first slide.
@@ -150,10 +191,6 @@ class SlideDeck {
     this.showCurrentSlide();
   }
 
-  /**
-   * Decrement the currentSlideIndes and show the corresponding slide. If the
-   * current slide is the first slide, then the previous is the final.
-   */
   goPrevSlide() {
     this.currentSlideIndex--;
 
@@ -165,12 +202,7 @@ class SlideDeck {
   }
 
   /**
-   * ### preloadFeatureCollections
-   *
-   * Initiate a fetch on all slide data so that the browser can cache the
-   * requests. This way, when a specific slide is loaded it has a better chance
-   * of loading quickly.
-   */
+   * ### preloadFeatureCollections   */
   preloadFeatureCollections() {
     for (const slide of this.slides) {
       this.getSlideFeatureCollection(slide);

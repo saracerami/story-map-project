@@ -1,0 +1,782 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 8,
+        "AGE": 44,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1310688000000,
+        "UNIT": "UNKNOWN",
+        "ACTION": "Accept",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.128599,
+          40.001902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 50,
+        "AGE": 48,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1278460800000,
+        "UNIT": "District 12",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.139298,
+          39.973769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 95,
+        "AGE": 48,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1244160000000,
+        "UNIT": "District 15",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.059636,
+          40.024926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 107,
+        "AGE": 35,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "VERBAL ABUSE",
+        "DATE_": 1279238400000,
+        "UNIT": "District 15",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.027466,
+          40.03329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 211,
+        "AGE": 59,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1283904000000,
+        "UNIT": "District 19",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.263791,
+          39.972111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 278,
+        "AGE": 46,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1231891200000,
+        "UNIT": "District 24",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.152736,
+          39.95501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 280,
+        "AGE": 28,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1235088000000,
+        "UNIT": "District 24",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.104311,
+          39.999255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 282,
+        "AGE": 42,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1247184000000,
+        "UNIT": "District 24",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.108724,
+          39.999034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 290,
+        "AGE": 26,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1273622400000,
+        "UNIT": "District 24",
+        "ACTION": "ACCEPT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.124541,
+          39.995309
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 291,
+        "AGE": 36,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1273622400000,
+        "UNIT": "District 24",
+        "ACTION": "ACCEPT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.124541,
+          39.995309
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 295,
+        "AGE": 21,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1320105600000,
+        "UNIT": "District 24",
+        "ACTION": "Reject",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.122451,
+          40.008694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 297,
+        "AGE": 32,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1338422400000,
+        "UNIT": "District 24",
+        "ACTION": "ACCEPT",
+        "STATUS": "OPEN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.112162,
+          40.012086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 298,
+        "AGE": 26,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1339372800000,
+        "UNIT": "District 24",
+        "ACTION": "ACCEPT",
+        "STATUS": "OPEN"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.118061,
+          39.993416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 302,
+        "AGE": 52,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1240444800000,
+        "UNIT": "District 25",
+        "ACTION": "AUDIT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.12194,
+          39.997639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 305,
+        "AGE": 0,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1245283200000,
+        "UNIT": "District 25",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.138793,
+          39.995913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 306,
+        "AGE": 47,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1245628800000,
+        "UNIT": "District 25",
+        "ACTION": "AUDIT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.147676,
+          39.997802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 312,
+        "AGE": 42,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1266537600000,
+        "UNIT": "District 25",
+        "ACTION": "ACCEPT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.138182,
+          40.001329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 314,
+        "AGE": 0,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1281657600000,
+        "UNIT": "District 25",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.137852,
+          39.991996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 316,
+        "AGE": 28,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1286409600000,
+        "UNIT": "District 25",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.099302,
+          39.992187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 317,
+        "AGE": 34,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1288224000000,
+        "UNIT": "District 25",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.131335,
+          39.994154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 318,
+        "AGE": 36,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1290988800000,
+        "UNIT": "District 25",
+        "ACTION": "AUDIT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.121128,
+          39.998042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 319,
+        "AGE": 27,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1295395200000,
+        "UNIT": "District 25",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.137518,
+          40.02113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 321,
+        "AGE": 30,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1299024000000,
+        "UNIT": "District 25",
+        "ACTION": "Accept",
+        "STATUS": "NA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.143217,
+          40.003474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 322,
+        "AGE": 48,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1303257600000,
+        "UNIT": "District 25",
+        "ACTION": "Audit",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.125229,
+          40.001734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 326,
+        "AGE": 66,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1322524800000,
+        "UNIT": "District 25",
+        "ACTION": "Accept",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.131206,
+          39.994248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 329,
+        "AGE": 19,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1332288000000,
+        "UNIT": "District 25",
+        "ACTION": "ACCEPT",
+        "STATUS": "CLOSED"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.143513,
+          39.989835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 330,
+        "AGE": 35,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "VERBAL ABUSE",
+        "DATE_": 1339977600000,
+        "UNIT": "District 25",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.161227,
+          39.953128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 336,
+        "AGE": 20,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1236556800000,
+        "UNIT": "District 26",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.143045,
+          39.934285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 338,
+        "AGE": 19,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1240876800000,
+        "UNIT": "District 26",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.136508,
+          39.98997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 339,
+        "AGE": 25,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1242086400000,
+        "UNIT": "District 26",
+        "ACTION": "ACCEPT",
+        "STATUS": "Open"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.124591,
+          39.97792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 348,
+        "AGE": 27,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1290384000000,
+        "UNIT": "District 26",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.14353,
+          39.97687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 349,
+        "AGE": 23,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "NOT CLASSIFIED",
+        "DATE_": 1294790400000,
+        "UNIT": "District 26",
+        "ACTION": "NA",
+        "STATUS": "NA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.129643,
+          39.987547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 351,
+        "AGE": 23,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1299888000000,
+        "UNIT": "District 26",
+        "ACTION": "Reject",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.141794,
+          39.988167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 352,
+        "AGE": 38,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "PHYSICAL ABUSE",
+        "DATE_": 1300060800000,
+        "UNIT": "District 26",
+        "ACTION": "Accept",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.141794,
+          39.988167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 417,
+        "AGE": 29,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "VERBAL ABUSE",
+        "DATE_": 1242259200000,
+        "UNIT": "District 6",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.156499,
+          39.953532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 437,
+        "AGE": 35,
+        "RACE": "Hispanic",
+        "SEX": "Male",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1235347200000,
+        "UNIT": "District 9",
+        "ACTION": "AUDIT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.168326,
+          39.925127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID_1": 449,
+        "AGE": 48,
+        "RACE": "Hispanic",
+        "SEX": "Female",
+        "TYPE": "ABUSE OF AUTHORITY",
+        "DATE_": 1279670400000,
+        "UNIT": "District 9",
+        "ACTION": "REJECT",
+        "STATUS": "Closed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.168009,
+          39.962508
+        ]
+      }
+    }
+  ]
+}
