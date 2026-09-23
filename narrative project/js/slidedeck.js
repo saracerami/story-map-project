@@ -35,7 +35,6 @@ constructor(slides, map, slideOptions = {}) {
   syncMapToSlide(slide) {
 
 }
-
   updateDataLayer(data, options = {}, slideId) {
     if (this.layers[slideId]) {
       this.dataLayer.removeLayer(this.layers[slideId]);
@@ -106,7 +105,7 @@ async showSlide(slide) {
 
     for (let i = targetIndex + 1; i < slideArray.length; i++) {
       const laterSlideId = slideArray[i].id;
-      if (laterSlideId === 'title-slide') continue;
+      if (laterSlideId === '01_philadelphia_boundary') continue;
       if (this.layers[laterSlideId]) {
         this.dataLayer.removeLayer(this.layers[laterSlideId]);
         delete this.layers[laterSlideId];
@@ -126,12 +125,12 @@ async showSlide(slide) {
     }
 for (let i = 0; i < targetIndex; i++) {
       const olderSlideId = slideArray[i].id;
-      if (olderSlideId === 'intro-slide') continue;
+      if (olderSlideId === '02_2010_census_tract_map') continue;
       if (this.layers[olderSlideId]) {
         this.layers[olderSlideId].setStyle({ opacity: 0.1, fillOpacity: 0.1 });
       }
     }
-    if (slide.id !== 'intro-slide' && this.layers[slide.id]) {
+    if (slide.id !== '02_2010_census_tract_map' && this.layers[slide.id]) {
       this.layers[slide.id].setStyle({ opacity: 1, fillOpacity: 0.9 });
     }
     /**

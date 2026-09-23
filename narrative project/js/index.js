@@ -1,10 +1,22 @@
 import { SlideDeck } from './slidedeck.js';
 
-var map = L.map('map').setView([39.8283, -98.5795], 4);
+const SmoothRenderer = L.SVG.extend({
+  // Override the default _onZoom function, which simply scales the lower
+  // resolution shapes. Instead, we want to reproject the shapes at each new
+  // zoom level, as is done by default when zooming ends.
+  _onZoom: function () {
+    this._onZoomEnd();
+    this._update();
+  }
+});
+
+const map = L.map('map', { renderer: new SmoothRenderer() }).setView([39.8283, -98.5795], 4);
+
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
 
 // ## Interface Elements
 const slides = document.querySelectorAll('.slide');
@@ -13,7 +25,7 @@ const slideNextButton = document.querySelector('#next-slide');
 const slideSection = document.querySelector('.slide-section');
 
 const slideOptions = {
-  'title-slide': {
+  '01_philadelphia_boundary': {
     style: (feature) => ({
       color: 'teal',
       weight: 1,
@@ -21,7 +33,7 @@ const slideOptions = {
     
     }),
   },
-    'intro-slide': {
+    '02_2010_census_tract_map': {
     style: (feature) => ({
       color: 'teal',
       weight: 2,
@@ -29,7 +41,7 @@ const slideOptions = {
       fillOpacity: .6,
     }),
   },
-  'second-slide': {
+  '03_Black_complainants': {
     pointToLayer: (feature, latLng) => {
       return L.circleMarker(latLng, {
         radius: 5.5, 
@@ -43,7 +55,7 @@ const slideOptions = {
       layer.bindTooltip(feature.properties.label);
     },
   },
-  'third-slide': {
+  '04_white_complainants': {
     pointToLayer: (feature, latLng) => {
       return L.circleMarker(latLng, {
         radius: 5.5,
@@ -56,12 +68,12 @@ const slideOptions = {
       layer.bindTooltip(feature.properties.label);
     },
   },
-  'fourth-slide': {
+  '05_Latino_complainants': {
     pointToLayer: (feature, latLng) => {
       return L.circleMarker(latLng, {
         radius: 5.5,
         color: 'white',
-        weight: .5,
+        weight: 1,
         fillColor: '#ffa200',
       });
     },
@@ -70,14 +82,13 @@ const slideOptions = {
     }
   },
 
-  'fifth-slide': {
+  '06_Asian_complainants': {
     pointToLayer: (feature, latLng) => {
       return L.circleMarker(latLng, {
         radius: 5.5,
         color: 'white',
         weight: .5,
         fillColor: '#ff4500',
-        fillOpacity: 100,
       });
     },
     onEachFeature: (feature, layer) => {
@@ -95,3 +106,5 @@ slideNextButton.addEventListener('click', () => deck.goNextSlide());
 
 deck.preloadFeatureCollections();
 deck.showCurrentSlide();
+
+
